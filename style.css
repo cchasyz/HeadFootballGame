@@ -1,0 +1,223 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#game{
+  display: none;
+  z-index: -999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  #player1scoretext{
+    position: absolute;
+    font-size: xx-large;
+    top: 12%;
+    left: 13%;
+  }
+  #player2scoretext {
+    position: absolute;
+    font-size: xx-large;
+    top: 12%;
+    left: 85%;
+  }
+  #timertext{
+    position: absolute;
+    font-size: xx-large;
+    top: 12%;
+    left: 48%;
+  }
+  #leaderboardbtn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: large;
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
+.start{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 5% 0;
+  padding: 2rem;
+  width: 50%;
+  background-color: darkslateblue;
+  color: white;
+  .header{
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  #playbtn{
+    background-color: green;
+    color: white;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+  }
+  #playbtn:hover{
+    background-color: lightgreen;
+    transition: 300ms;
+    color: black;
+  }
+  #playbtn:disabled{
+    background-color: gray;
+    color: black;
+    cursor: not-allowed;
+  }
+  #insbtn{
+    background-color: brown;
+    color: white;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  #insbtn:hover{
+    background-color: lightcoral;
+    transition: 300ms;
+    color: black;
+  }
+}
+#menu{
+  display: flex;
+  justify-content: space-evenly;
+}
+#ins{
+  display: block;
+  align-content: center;
+  background-color: brown;
+  color: white;
+  margin: 5% 0;
+  padding: 0 5rem;
+  .top{
+    position: absolute;
+    top: 7rem;
+    margin-left: -2rem;
+    display: flex;
+    gap: 2rem;
+    #xbtn{
+      position: absolute;
+      top: -0.5rem;
+      right: -4rem;
+      border-radius: 1rem;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+#pausemenu{
+  display: none;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: 13% 0 0 25%;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 20px;
+  padding: 5rem 0;
+  #continuebtn{
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    /* color: white; */
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
+#countdownoutput{
+  display: none;
+  font-size: 200px;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkslateblue;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+}
+#gameoverview{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  background-color: darkslateblue;
+  color: white;
+  gap: 2rem;
+  #savebtn{
+    background-color: lightgreen;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #restartbtn{
+    background-color: lightgreen;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+#leaderboardview{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  background-color: darkslateblue;
+  color: white;
+  gap: 1rem;
+  li{
+    list-style: none;
+  }
+  #menubtn{
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  #sortScore{
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  #sortRecent{
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="menu">   
+  <div class="start">
+    <div class="header">
+      <img src="Sprites/Ball 02.png" alt="ball image">
+      <h1>World Head <br> FootBall</h1>
+    </div>
+    <label for="player1input">Player 1 username</label>
+    <input type="text" id="player1input" placeholder="username...">
+
+    <label for="player2input">Player 2 username</label>
+    <input type="text" id="player2input" placeholder="username...">
+
+    <select name="" id="player1country">
+      <option value="" selected disabled>Select country (player 1)</option>
+      <option value="Brazil">Brazil</option>
+      <option value="England">England</option>
+      <option value="Germany">Germany</option>
+      <option value="Italy">Italy</option>
+      <option value="Japan">Japan</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Spain">Spain</option>
+    </select>
+
+    <select name="" id="player2country">
+      <option value="" selected disabled>Select country (player 2)</option>
+      <option value="Brazil">Brazil</option>
+      <option value="England">England</option>
+      <option value="Germany">Germany</option>
+      <option value="Italy">Italy</option>
+      <option value="Japan">Japan</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Spain">Spain</option>
+    </select>
+
+    <select name="" id="diff">   
+      <option value="" selected disabled>Select Level</option>
+      <option value="15">hard</option>
+      <option value="20">medium</option>
+      <option value="30">easy</option>
+    </select>
+    
+    <div>
+      <button id="playbtn">Play game</button>
+      <button id="insbtn">Instructions</button>
+    </div>
+  </div>
+
+  <div id="ins">
+    <div class="top">
+      <h1>How to play game</h1>
+      <button id="xbtn">X</button>
+    </div>
+    <div>
+      <p>1. input username</p>
+      <p>2. move player 1 using w a s d and <br> player 2 using arrow keys</p>
+      <p>3. get the higher score to win</p>
+      <p>4. enjoy!</p>
+    </div>
+  </div>
+  </div>
+
+  <div id="game">
+    <span id="player1scoretext">0</span>
+    <span id="player2scoretext">0</span>
+    <span id="timertext">30</span>
+    <button id="leaderboardbtn">Match history</button>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div id="leaderboardview">
+    <h1>leaderboard</h1>
+
+    <ul id="leaderboardList"></ul>
+    <button id="sortScore">Sort by Highest Score</button>
+    <button id="sortRecent">Sort by Most Recent</button>
+    <button id="menubtn">Back to Menu</button>
+  </div>
+
+  <div id="pausemenu">
+    <h1>Paused</h1>
+    <button id="continuebtn">continue</button>
+  </div>
+
+  <div id="countdownoutput">3</div>
+
+  <div id="gameoverview">
+    <h1>GameOver!</h1>
+    <img src="Sprites/Flag/Brazil.png" alt="" width="100">
+    <p><span id="usn1output"></span> : <span id="score1output"></span></p>
+    <img src="Sprites/Flag/Netherlands.png" alt="" width="100">
+    <p><span id="usn2output"></span> : <span id="score2output"></span></p>
+    <button id="savebtn">Save match history</button>
+    <button id="restartbtn">Restart</button>
+  </div>
+
+  <script src="menu.js"></script>
+  <script src="load.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
